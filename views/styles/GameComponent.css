@@ -5,21 +5,26 @@
 }
 
 .links{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     position: absolute;
     bottom: 10%;
-    left: 20%;
+    left: 50%;
+    transform: translatex(-50%)
 }
 
-.link-container{
+/*.link-container{
     display: inline-block;
     position: relative;
-}
-.get-ios{
+}*/
+
+.img-ios{
     height: 80px;
     width: 150px;
 }
 
-.get-android{
+.img-android{
     height: 80px;
-    width: 200px;
+    width: 150px;
 }

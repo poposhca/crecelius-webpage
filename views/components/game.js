@@ -9,12 +9,8 @@ var Game = ({name, color, columns}) => {
         <div className={`${columns} gameCol`} style={colorStyle}>
             <p>{name}</p>
             <div className="links">
-                <div className="link-container">
-                    <img className="get-ios" src="images/appStore/ESMX/White_lockup/SVG/Download_on_the_App_Store_Badge_ESMX_RGB_wht_100217.svg" />
-                </div>
-                <div className="link-container">
-                    <img className="get-android" src="images/playStore/ESMX/google-play-badge.png" />
-                </div>
+                <img className="img-ios" src="images/appStore/ESMX/White_lockup/SVG/Download_on_the_App_Store_Badge_ESMX_RGB_wht_100217.svg" />
+                <img className="img-android" src="images/playStore/ESMX/google-play-badge.png" />
             </div>
         </div>
     )
