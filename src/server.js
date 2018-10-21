@@ -5,16 +5,17 @@ import config from './config'
 
 const app = express()
 
+app.set('view engine', 'hbs')
+
 app.use('/', express.static(path.join(__dirname, '../public')))
 
 app.get('/', (req,res) => {
     console.log(req.headers["accept-language"] )
-    fs.readFile('./views/index.html', (err, data) => {
-        if(err && err !== null)
-            res.send('Error getting the page\n' + err.message)
-        else
-            res.send(data.toString())
-    })
+    res.render('index', {landing:true})
+})
+
+app.get('/toys', (req,res) => {
+    res.render('index', {'toys': true})
 })
 
 app.listen(config.PORT, () => {

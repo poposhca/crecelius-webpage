@@ -14,11 +14,6 @@
     transform: translatex(-50%)
 }
 
-/*.link-container{
-    display: inline-block;
-    position: relative;
-}*/
-
 .img-ios{
     height: 80px;
     width: 150px;
@@ -27,4 +22,6 @@
 .img-android{
     height: 80px;
     width: 150px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }

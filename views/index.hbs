@@ -11,14 +11,14 @@
     
     <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand">CRECELIUS</a>
+            <a class="navbar-brand" href="/">CRECELIUS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="#">Sobre Nosotros</a>
-                    <a class="nav-item nav-link" href="#">Juguetes</a>
+                    <a class="nav-item nav-link" href="toys">Juguetes</a>
                 </div>
             </div>
         </nav>
@@ -31,7 +31,13 @@
 
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    {{#landing}}
     <script src="/bundle.js" type="application/javascript"></script>
-
+    {{/landing}}
+    {{#toys}}
+    <script src="unity/UnityLoader.js"></script>
+    <script src="/toysbundle.js" type="application/javascript"></script>
+    {{/toys}}
+    
 </body>
 </html>

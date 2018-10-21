@@ -1,0 +1,12 @@
+{
+"companyName": "Crecelius",
+"productName": "Toys",
+"dataUrl": "toys_project.data.unityweb",
+"wasmCodeUrl": "toys_project.wasm.code.unityweb",
+"wasmFrameworkUrl": "toys_project.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

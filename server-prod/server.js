@@ -11,12 +11,17 @@ var _config = _interopRequireDefault(require("./config"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
+app.set('view engine', 'hbs');
 app.use('/', _express.default.static(_path.default.join(__dirname, '../public')));
 app.get('/', function (req, res) {
   console.log(req.headers["accept-language"]);
-
-  _fs.default.readFile('./views/index.html', function (err, data) {
-    if (err && err !== null) res.send('Error getting the page\n' + err.message);else res.send(data.toString());
+  res.render('index', {
+    landing: true
+  });
+});
+app.get('/toys', function (req, res) {
+  res.render('index', {
+    'toys': true
   });
 });
 app.listen(_config.default.PORT, function () {
