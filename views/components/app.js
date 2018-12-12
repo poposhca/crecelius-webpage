@@ -7,9 +7,9 @@ class Content extends React.Component{
         super(props)
         this.state = {
             games: [
-                {id:1, name: 'lightspeed', color:"grey"}, 
-                {id:2, name: 'hole in one', color: "yellow"},
-                {id:3, name: 'bathroom', color: "#4286f4"}
+                {name: 'bathroom', image: 'banio-wide.jpg'},
+                {name: 'lightspeed', image: 'lightSpeed-wide.jpg'}, 
+                {name: 'hole in one', image: 'HoleInOne-small.jpg'}
             ]
         }
     }
@@ -20,9 +20,9 @@ class Content extends React.Component{
                 <div className="row">
                     {this.state.games.map((g, i) =>
                     {
-                        if(i == this.state.games.length - 1 && this.state.games.length % 2 != 0)
-                            return <Game key={g.id} {...g} columns="col-md-12" />
-                        return <Game key={g.id} {...g} columns="col-md-6" />
+                        if(i == 0 && this.state.games.length % 2 != 0)
+                            return <Game key={i} {...g} columns="col-md-12" />
+                        return <Game key={i} {...g} columns="col-md-6" />
                     }
                     )}
                 </div>

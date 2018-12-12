@@ -1,10 +1,11 @@
 import '../styles/GameComponent.css'
 
-var Game = ({name, color, columns}) => {
-    let colorStyle = {
-        backgroundColor: color
+var Game = ({name, image, columns}) => {
+    let colorStyle = { 
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundImage: `url(images/games/${image})`
     }
-    console.log(color)
     return (
         <div className={`${columns} gameCol`} style={colorStyle}>
             <p>{name}</p>
