@@ -7,7 +7,7 @@ class UnityPlayer extends React.Component{
     render(){
         const gameContainerStyle = {
             width: 'auto',
-            height: '1080px',
+            height: 'auto',
             margin: 'auto'
         }
         return(
